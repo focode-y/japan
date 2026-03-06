@@ -1271,9 +1271,6 @@ footer {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    status.className = 'form-status show';
-    status.textContent = '提交中，請稍候...';
-    btn.disabled = true;
 
     const payload = {
       name: form.elements.name.value.trim(),
@@ -1287,26 +1284,23 @@ footer {
     if (!payload.name || !payload.contact) {
       status.className = 'form-status show error';
       status.textContent = '請先填寫姓名與聯絡方式。';
-      btn.disabled = false;
       return;
     }
 
-    try {
-      const resp = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if (!resp.ok) throw new Error('submit_failed');
-      status.className = 'form-status show';
-      status.textContent = '提交成功，我們會盡快與您聯絡。';
-      form.reset();
-    } catch (err) {
-      status.className = 'form-status show error';
-      status.textContent = '提交失敗，請稍後再試（若持續失敗，請聯繫管理員檢查郵件配置）。';
-    } finally {
-      btn.disabled = false;
-    }
+    const to = 'info@torii-estate.com';
+    const subject = encodeURIComponent(`官網詢盤｜${payload.name}${payload.property ? `｜${payload.property}` : ''}`);
+    const body = encodeURIComponent(
+`姓名: ${payload.name}
+聯絡方式: ${payload.contact}
+感興趣物件: ${payload.property || '未填寫'}
+備註: ${payload.message || '無'}
+來源頁面: ${payload.source}
+提交時間: ${payload.submittedAt}`
+    );
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+    status.className = 'form-status show';
+    status.textContent = '已為您打開郵件客戶端，請確認後發送。';
   });
 })();
 </script>
