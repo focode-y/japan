@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TORII ESTATE | 日本不動產投資</title>
+<meta name="description" content="精選日本民泊與不動產投資物件，提供牌照齊全標的、收益分析與一站式運營支援。">
+<meta name="keywords" content="日本不動產,民泊投資,民泊牌照,日本房地產,投資物件,高回報物件">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TORII ESTATE | 日本不動產投資">
+<meta property="og:description" content="精選日本民泊與不動產投資物件，牌照齊全、可即時運營。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/images/t1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TORII ESTATE | 日本不動產投資">
+<meta name="twitter:description" content="精選日本民泊與不動產投資物件，牌照齊全、可即時運營。">
+<meta name="twitter:image" content="https://example.com/images/t1.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:     #0f0e0c;
+  --ink2:    #2a2520;
+  --warm:    #f5f0e8;
+  --paper:   #faf8f4;
+  --gold:    #c9a84c;
+  --gold2:   #e8c96a;
+  --rust:    #8b3a2a;
+  --muted:   #8a8070;
+  --border:  rgba(201,168,76,0.25);
+  --white:   #ffffff;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans SC', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed;inset:0;z-index:1000;
+  pointer-events:none;
+  opacity:0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ══════════════ NAV ══════════════ */
+nav {
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 3rem;
+  transition:all 0.4s;
+}
+nav.scrolled {
+  background:rgba(15,14,12,0.92);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo {
+  display:flex;flex-direction:column;line-height:1;
+  text-decoration:none;
+}
+.logo-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:600;letter-spacing:0.22em;
+  color:var(--gold);text-transform:uppercase;
+}
+.logo-ja {
+  font-family:'Noto Serif JP',serif;
+  font-size:0.6rem;letter-spacing:0.3em;
+  color:rgba(201,168,76,0.6);margin-top:2px;
+}
+.nav-links {
+  display:flex;gap:2.5rem;list-style:none;
+}
+.nav-links a {
+  font-family:'DM Mono',monospace;font-size:0.72rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:rgba(255,255,255,0.55);text-decoration:none;
+  transition:color 0.25s;
+}
+.nav-links a:hover { color:var(--gold); }
+.nav-contact {
+  font-family:'DM Mono',monospace;font-size:0.72rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  padding:0.6rem 1.4rem;border-radius:0;
+  text-decoration:none;transition:all 0.25s;
+  border:1px solid var(--gold);
+}
+.nav-contact:hover { background:transparent;color:var(--gold); }
+
+/* ══════════════ HERO ══════════════ */
+.hero {
+  height:100vh;min-height:700px;
+  position:relative;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+
+.hero-bg {
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1800&q=85&fit=crop');
+  background-size:cover;background-position:center 40%;
+  transform:scale(1.05);
+  animation:heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform:scale(1.05) translateY(0); }
+  to   { transform:scale(1.12) translateY(-2%); }
+}
+
+.hero-overlay {
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(10,9,8,0.2) 0%,
+    rgba(10,9,8,0.1) 30%,
+    rgba(10,9,8,0.65) 70%,
+    rgba(10,9,8,0.92) 100%
+  );
+}
+
+/* vertical gold line left */
+.hero-line {
+  position:absolute;left:3rem;top:0;bottom:0;
+  width:1px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+  opacity:0.4;
+}
+
+.hero-content {
+  position:relative;z-index:2;
+  padding:100px 3rem 5rem;
+  max-width:1400px;width:100%;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-content-inner {
+  background: rgba(10, 9, 8, 0.52);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 4px;
+  padding: 3.5rem 4rem;
+  max-width: 740px;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-family:'DM Mono',monospace;font-size:0.7rem;
+  letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;
+  margin-bottom:1.2rem;
+  opacity:0;animation:fadeUp 0.8s ease 0.3s forwards;
+}
+
+.hero-h1 {
+  font-family:'Noto Serif SC', serif;
+  font-size:clamp(3.2rem,6.5vw,6.5rem);
+  font-weight:700;line-height:1.12;
+  color:#ffffff;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.8);
+  opacity:0;animation:fadeUp 0.9s ease 0.5s forwards;
+  letter-spacing:0.04em;
+}
+.hero-h1 em { font-style:normal;color:var(--gold2);font-weight:700; }
+
+.hero-h1-ja {
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(1rem,2vw,1.5rem);
+  font-weight:300;letter-spacing:0.2em;
+  color:rgba(255,255,255,0.45);
+  margin-top:0.6rem;display:block;
+  opacity:0;animation:fadeUp 0.9s ease 0.65s forwards;
+}
+
+.hero-desc {
+  max-width:480px;
+  font-family:'Noto Serif JP',serif;
+  font-size:0.92rem;line-height:2;
+  font-weight:300;letter-spacing:0.08em;
+  color:rgba(255,255,255,0.6);
+  margin:1.8rem auto 0;
+  text-align:center;
+  opacity:0;animation:fadeUp 0.9s ease 0.8s forwards;
+}
+
+.hero-stats {
+  display:flex;gap:3rem;margin-top:3rem;
+  justify-content:center;
+  opacity:0;animation:fadeUp 0.9s ease 1s forwards;
+}
+.hero-stat-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.2rem;font-weight:300;color:var(--gold);display:block;line-height:1;
+}
+.hero-stat-label {
+  font-family:'DM Mono',monospace;font-size:0.65rem;
+  letter-spacing:0.15em;color:rgba(255,255,255,0.4);
+  margin-top:0.3rem;text-transform:uppercase;
+}
+
+.hero-scroll {
+  position:absolute;right:3rem;bottom:4rem;
+  display:flex;flex-direction:column;align-items:center;gap:0.8rem;
+  opacity:0;animation:fadeIn 1s ease 1.5s forwards;
+}
+.scroll-line {
+  width:1px;height:60px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%,100%{transform:scaleY(1);opacity:0.6;}
+  50%{transform:scaleY(0.6);opacity:1;}
+}
+.scroll-text {
+  font-family:'DM Mono',monospace;font-size:0.6rem;
+  letter-spacing:0.2em;color:rgba(255,255,255,0.35);
+  text-transform:uppercase;writing-mode:vertical-rl;
+}
+
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+/* ══════════════ MARQUEE ══════════════ */
+.marquee-bar {
+  background:var(--gold);
+  padding:0.75rem 0;overflow:hidden;
+  display:flex;
+}
+.marquee-track {
+  display:flex;gap:0;
+  white-space:nowrap;
+  animation:marquee 22s linear infinite;
+}
+.marquee-item {
+  font-family:'DM Mono',monospace;font-size:0.7rem;
+  letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);
+  padding:0 2.5rem;
+  border-right:1px solid rgba(0,0,0,0.15);
+}
+@keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+/* ══════════════ SECTION COMMONS ══════════════ */
+.section-wrap { padding:7rem 3rem;max-width:1400px;margin:0 auto; }
+
+.section-eyebrow {
+  font-family:'DM Mono',monospace;font-size:0.68rem;
+  letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;
+  margin-bottom:1rem;display:flex;align-items:center;gap:1rem;
+}
+.section-eyebrow::after {
+  content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.4;
+}
+
+.section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;
+  line-height:1.15;color:var(--ink);
+}
+.section-title em { font-style:italic;color:var(--gold); }
+
+.section-title-ja {
+  font-family:'Noto Serif JP',serif;font-size:0.8rem;
+  letter-spacing:0.2em;color:var(--muted);
+  margin-top:0.5rem;display:block;
+}
+
+/* ══════════════ PROPERTIES GRID ══════════════ */
+.props-section {
+  background:var(--ink);
+  padding:7rem 0;
+}
+.props-inner { max-width:1400px;margin:0 auto;padding:0 3rem; }
+
+.props-header {
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:4rem;
+  border-bottom:1px solid var(--border);
+  padding-bottom:2rem;
+}
+.props-header .section-title { color:var(--warm); }
+.props-header .section-title em { color:var(--gold); }
+.props-header .section-title-ja { color:rgba(245,240,232,0.35); }
+.props-count {
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;font-weight:300;
+  color:rgba(201,168,76,0.15);line-height:1;
+}
+
+/* property cards */
+.props-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5px;
+  background:var(--border);
+}
+
+.prop-card {
+  background:var(--ink2);
+  padding:0;overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:all 0.4s;
+}
+.prop-card:hover { background:#1e1a16; }
+
+.prop-img-wrap {
+  height:260px;overflow:hidden;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  background:#111;
+  border-radius:40px;
+}
+.prop-img-wrap img {
+  width:100%;height:100%;object-fit:contain;
+  transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.prop-card:hover .prop-img-wrap img { transform:scale(1.06); }
+
+.prop-badge {
+  position:absolute;top:1.2rem;left:1.2rem;
+  background:var(--gold);color:var(--ink);
+  font-family:'DM Mono',monospace;font-size:0.65rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  padding:0.3rem 0.8rem;
+}
+
+.prop-yield-badge {
+  position:absolute;top:1.2rem;right:1.2rem;
+  background:rgba(10,9,8,0.85);
+  backdrop-filter:blur(8px);
+  border:1px solid var(--gold);
+  color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:300;
+  padding:0.4rem 0.8rem;text-align:center;
+  line-height:1.2;
+}
+.prop-yield-badge small {
+  display:block;font-family:'DM Mono',monospace;
+  font-size:0.58rem;letter-spacing:0.1em;
+  color:rgba(201,168,76,0.6);margin-top:1px;
+}
+
+.prop-body { padding:2rem 2.2rem 2.5rem; }
+
+.prop-id {
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.2em;color:var(--gold);opacity:0.7;
+  text-transform:uppercase;margin-bottom:0.7rem;
+}
+
+.prop-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.65rem;font-weight:300;
+  color:var(--warm);line-height:1.2;
+  margin-bottom:1.2rem;
+}
+
+.prop-specs {
+  display:flex;flex-wrap:wrap;gap:0.5rem;
+  margin-bottom:1.5rem;
+}
+.spec-chip {
+  font-family:'DM Mono',monospace;font-size:0.65rem;
+  letter-spacing:0.08em;color:rgba(245,240,232,0.5);
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:0.3rem 0.8rem;border-radius:0;
+}
+
+.prop-price {
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;font-weight:300;
+  color:var(--warm);line-height:1;
+}
+.prop-price-unit {
+  font-family:'Noto Serif JP',serif;font-size:0.8rem;
+  color:var(--muted);margin-left:0.3rem;
+}
+
+.prop-divider {
+  width:32px;height:1px;background:var(--gold);
+  opacity:0.4;margin:1.2rem 0;
+}
+
+.prop-desc {
+  font-size:0.84rem;color:rgba(245,240,232,0.45);
+  line-height:1.85;
+}
+
+.prop-footer {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 2.2rem;
+  border-top:1px solid rgba(201,168,76,0.12);
+  margin-top:0;
+}
+.prop-license {
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;
+}
+.prop-license-dot {
+  width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0.7;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
+
+.prop-cta {
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  display:flex;align-items:center;gap:0.5rem;
+  transition:gap 0.25s;
+}
+.prop-cta:hover { gap:0.9rem; }
+.prop-cta::after { content:'→'; }
+
+/* ══════════════ YIELD HIGHLIGHT ══════════════ */
+.yield-section {
+  background:var(--warm);
+  padding:6rem 3rem;
+  position:relative;overflow:hidden;
+}
+.yield-section::before {
+  content:'8%';
+  position:absolute;right:-2rem;top:50%;transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:22rem;font-weight:300;
+  color:rgba(201,168,76,0.06);line-height:1;pointer-events:none;
+  white-space:nowrap;
+}
+.yield-inner { max-width:1400px;margin:0 auto; }
+.yield-grid {
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;
+  background:rgba(201,168,76,0.2);
+  border:1px solid rgba(201,168,76,0.2);
+}
+.yield-item {
+  background:var(--warm);padding:3rem 2.5rem;
+  transition:background 0.3s;
+}
+.yield-item:hover { background:var(--white); }
+.yield-item-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.8rem;font-weight:300;color:var(--gold);
+  line-height:1;display:block;
+}
+.yield-item-label {
+  font-family:'DM Mono',monospace;font-size:0.7rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted);margin-top:0.6rem;display:block;
+}
+.yield-item-desc {
+  font-size:0.86rem;color:var(--ink2);line-height:1.8;
+  margin-top:1rem;
+}
+
+/* ══════════════ MINPAKU SECTION ══════════════ */
+.minpaku-section {
+  padding:7rem 3rem;
+  max-width:1400px;margin:0 auto;
+}
+.minpaku-layout {
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;
+}
+.minpaku-img-stack { position:relative;height:560px; }
+.mi-img {
+  position:absolute;border:4px solid var(--paper);
+  overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);
+}
+.mi-img img { width:100%;height:100%;object-fit:cover;display:block; }
+.mi-1 { top:0;left:0;width:68%;height:340px; }
+.mi-2 { bottom:0;right:0;width:56%;height:260px; }
+
+.minpaku-text {}
+.minpaku-list { margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem; }
+.ml-item {
+  display:flex;align-items:flex-start;gap:1.2rem;
+  padding:1.4rem 1.5rem;
+  border-left:2px solid var(--gold);
+  background:var(--warm);
+  transition:all 0.25s;
+}
+.ml-item:hover { background:var(--white);border-left-color:var(--rust); }
+.ml-num {
+  font-family:'Cormorant Garamond',serif;font-size:1.6rem;
+  font-weight:300;color:var(--gold);flex-shrink:0;line-height:1;
+}
+.ml-content { }
+.ml-title {
+  font-family:'Noto Serif JP',serif;font-size:0.88rem;
+  font-weight:500;color:var(--ink);letter-spacing:0.05em;
+}
+.ml-desc { font-size:0.82rem;color:var(--muted);line-height:1.7;margin-top:0.25rem; }
+
+/* ══════════════ CONTACT ══════════════ */
+.contact-section {
+  background:var(--ink);
+  padding:8rem 3rem;
+  position:relative;overflow:hidden;
+}
+.contact-section::before {
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.contact-inner { max-width:1400px;margin:0 auto; }
+.contact-layout { display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center; }
+
+.contact-left .section-title { color:var(--warm); }
+.contact-left .section-title em { color:var(--gold); }
+.contact-left .section-title-ja { color:rgba(245,240,232,0.3); }
+.contact-left p {
+  font-size:0.9rem;color:rgba(245,240,232,0.5);
+  line-height:1.9;margin-top:1.5rem;max-width:380px;
+}
+
+.contact-form { display:flex;flex-direction:column;gap:1px;background:var(--border); }
+.form-group { background:var(--ink2);padding:1.2rem 1.5rem; }
+.form-label {
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);opacity:0.7;display:block;margin-bottom:0.5rem;
+}
+.form-input, .form-select, .form-textarea {
+  width:100%;background:transparent;border:none;outline:none;
+  font-family:'Noto Sans SC',sans-serif;font-size:0.9rem;
+  color:var(--warm);
+}
+.form-input::placeholder, .form-textarea::placeholder { color:rgba(245,240,232,0.2); }
+.form-textarea { resize:none;height:80px;line-height:1.7; }
+.form-select { color:var(--warm);cursor:pointer; }
+.form-select option { background:var(--ink2);color:var(--warm); }
+
+.form-submit {
+  background:var(--gold);color:var(--ink);
+  border:none;padding:1.4rem 2.5rem;
+  font-family:'DM Mono',monospace;font-size:0.75rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  cursor:pointer;transition:all 0.25s;
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+  margin-top:1px;
+}
+.form-submit:hover { background:var(--gold2); }
+.form-submit::after { content:'→';font-size:1rem; }
+
+/* ══════════════ FOOTER ══════════════ */
+footer {
+  background:var(--ink);
+  padding:2.5rem 3rem;
+  border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-logo {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-weight:600;letter-spacing:0.2em;
+  color:var(--gold);text-transform:uppercase;
+}
+.footer-copy {
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.1em;color:rgba(245,240,232,0.2);
+}
+.footer-links { display:flex;gap:2rem; }
+.footer-links a {
+  font-family:'DM Mono',monospace;font-size:0.62rem;
+  letter-spacing:0.1em;color:rgba(245,240,232,0.3);
+  text-decoration:none;transition:color 0.2s;
+}
+.footer-links a:hover { color:var(--gold); }
+
+/* ══════════════ REVEAL ══════════════ */
+.reveal { opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease; }
+.reveal.on { opacity:1;transform:translateY(0); }
+.reveal-left { opacity:0;transform:translateX(-32px);transition:opacity .7s ease,transform .7s ease; }
+.reveal-left.on { opacity:1;transform:translateX(0); }
+.reveal-right { opacity:0;transform:translateX(32px);transition:opacity .7s ease,transform .7s ease; }
+.reveal-right.on { opacity:1;transform:translateX(0); }
+
+/* stagger children */
+.stagger > * { opacity:0;transform:translateY(20px);transition:all 0.55s ease; }
+.stagger.on > *:nth-child(1){opacity:1;transform:none;transition-delay:.00s;}
+.stagger.on > *:nth-child(2){opacity:1;transform:none;transition-delay:.08s;}
+.stagger.on > *:nth-child(3){opacity:1;transform:none;transition-delay:.16s;}
+.stagger.on > *:nth-child(4){opacity:1;transform:none;transition-delay:.24s;}
+.stagger.on > *:nth-child(5){opacity:1;transform:none;transition-delay:.32s;}
+.stagger.on > *:nth-child(6){opacity:1;transform:none;transition-delay:.40s;}
+.stagger.on > *:nth-child(7){opacity:1;transform:none;transition-delay:.48s;}
+.stagger.on > *:nth-child(8){opacity:1;transform:none;transition-delay:.56s;}
+.stagger.on > *:nth-child(9){opacity:1;transform:none;transition-delay:.64s;}
+
+/* ══════════════ RESPONSIVE ══════════════ */
+@media (max-width:900px) {
+  nav { padding:.9rem 1.5rem; }
+  nav .nav-links { display:none; }
+  .hero-content { padding:0 1.5rem 3rem; text-align:center; align-items:center; }
+  .hero-content-inner { padding:2rem 1.5rem; }
+  .hero-line { left:1.5rem; }
+  .hero-scroll { right:1.5rem; }
+  .section-wrap { padding:5rem 1.5rem; }
+  .props-inner { padding:0 1.5rem; }
+  .props-grid { grid-template-columns:1fr; }
+  .prop-img-wrap { height:220px; }
+  .yield-grid { grid-template-columns:1fr; }
+  .minpaku-layout { grid-template-columns:1fr; }
+  .minpaku-img-stack { height:300px; margin-bottom:2rem; }
+  .contact-layout { grid-template-columns:1fr; gap:3rem; }
+  .yield-section { padding:4rem 1.5rem; }
+  .contact-section { padding:5rem 1.5rem; }
+  footer { padding:2rem 1.5rem; }
+  .hero-stats { gap:1.8rem; }
+}
+
+.form-status {
+  padding:0.9rem 1.2rem;
+  font-size:0.85rem;
+  line-height:1.6;
+  background:rgba(255,255,255,0.04);
+  color:rgba(245,240,232,0.85);
+  display:none;
+}
+.form-status.show { display:block; }
+.form-status.error { color:#ffd2d2; background:rgba(160,20,20,0.25); }
+
+/* hide non-active lang content */
+.lang-content { display:none; }
+.lang-content.active { display:block; }
+.lc { display:none !important; }
+.lc.active { display:block !important; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <span class="logo-en">Torii Estate</span>
+    <span class="logo-ja">日本不動產投資</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#properties">物件一覽</a></li>
+    <li><a href="#yield">投資回報</a></li>
+    <li><a href="#minpaku">民泊牌照</a></li>
+    <li><a href="#contact">聯絡我們</a></li>
+  </ul>
+  <a href="#contact" class="nav-contact" id="nav-contact-btn">諮詢物件</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="hero-content-inner">
+    <p class="hero-eyebrow">Japan Premium Real Estate · 民泊投資</p>
+    <h1 class="hero-h1">
+      在日本<br>
+      <em>穩健增值</em><br>
+      的不動產
+    </h1>
+    <span class="hero-h1-ja">含民泊牌照 · 高回報率 · 精選物件</span>
+    <p class="hero-desc">
+      精選具備民泊牌照的優質日本物件，年回報率約 8%–14.1%。
+      涵蓋複合商辦、住宅與開發型土地等多元標的，
+      並提供一站式購置與營運支援。
+    </p>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">9</span>
+        <div class="hero-stat-label">精選物件</div>
+      </div>
+      <div>
+        <span class="hero-stat-num">8–14%</span>
+        <div class="hero-stat-label">年回報率</div>
+      </div>
+      <div>
+        <span class="hero-stat-num">全程</span>
+        <div class="hero-stat-label">運營支援</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span class="marquee-item">民泊牌照已取得</span>
+    <span class="marquee-item">年回報 8%–14.1%</span>
+    <span class="marquee-item">九棟精選物件</span>
+    <span class="marquee-item">倉庫 · 商鋪 · 住宅</span>
+    <span class="marquee-item">含民泊牌照</span>
+    <span class="marquee-item">日本不動產投資精選</span>
+    <span class="marquee-item">민박 허가증 보유</span>
+    <span class="marquee-item">民泊牌照已取得</span>
+    <span class="marquee-item">年回報 8%–14.1%</span>
+    <span class="marquee-item">九棟精選物件</span>
+    <span class="marquee-item">倉庫 · 商鋪 · 住宅</span>
+    <span class="marquee-item">含民泊牌照</span>
+    <span class="marquee-item">日本不動產投資精選</span>
+    <span class="marquee-item">민박 허가증 보유</span>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<section class="props-section" id="properties">
+  <div class="props-inner">
+    <div class="props-header reveal">
+      <div>
+        <div class="section-eyebrow">精選物件</div>
+        <h2 class="section-title">精選<em>投資物件</em></h2>
+        <span class="section-title-ja">民泊牌照取得済み · 高利回り</span>
+      </div>
+      <div class="props-count">09</div>
+    </div>
+
+    <div class="props-grid stagger">
+
+      <!-- T1 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/t1.png" alt="T1物件">
+          <div class="prop-badge">T1 · <span data-zh="鐵骨造" data-en="Steel Frame">鐵骨造</span></div>
+          <div class="prop-yield-badge">≈8%<small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">T-01</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">都市型<br>民泊運用物件</span>
+            <span class="lc" data-lang="en">Urban<br>Minpaku Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip">土地 82㎡</span>
+            <span class="spec-chip">建物 339㎡</span>
+            <span class="spec-chip"><span data-zh="鐵骨造" data-en="Steel">鐵骨造</span></span>
+            <span class="spec-chip"><span data-zh="民泊牌照付" data-en="Minpaku Licensed">民泊牌照付</span></span>
+          </div>
+          <div class="prop-price">1.2<span class="prop-price-unit">億円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">土地 82㎡、建物 339㎡ 的鐵骨造物件。民泊牌照已取得，購入即可運營，位置優越，稼動率穩定。</span>
+            <span class="lc" data-lang="en">Steel frame building, 82㎡ land / 339㎡ floor area. Minpaku license obtained — ready for immediate operation.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民泊牌照已取得" data-en="Licensed">民泊牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- T2 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/t2.png" alt="T2物件">
+          <div class="prop-badge">T2 · <span data-zh="複合用途" data-en="Mixed-Use">複合用途</span></div>
+          <div class="prop-yield-badge" style="background:rgba(139,58,42,0.9);border-color:var(--gold2);">8.2–14.1%<small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">T-02</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">倉庫・商鋪<br>民泊複合物件</span>
+            <span class="lc" data-lang="en">Warehouse · Shop<br>Mixed-Use Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip">土地 132㎡</span>
+            <span class="spec-chip">建物 435㎡</span>
+            <span class="spec-chip"><span data-zh="鐵骨造" data-en="Steel">鐵骨造</span></span>
+            <span class="spec-chip">1F <span data-zh="倉庫/商鋪/事務所" data-en="Warehouse/Shop/Office">倉庫/商鋪/事務所</span></span>
+            <span class="spec-chip">2F <span data-zh="民泊" data-en="Minpaku">民泊</span></span>
+          </div>
+          <div class="prop-price">2.0<span class="prop-price-unit">億円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">1F 倉庫・商鋪・事務所，2F 民泊的複合用途物件。多元收益來源，回報率高達 8.2%〜14.1%。</span>
+            <span class="lc" data-lang="en">Ground floor: warehouse, shop & office. Upper floor: Minpaku. Multiple income streams driving yields of 8.2–14.1%.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民泊牌照已取得" data-en="Licensed">民泊牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- T3 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/t3.png" alt="T3物件">
+          <div class="prop-badge">T3 · 2DK</div>
+          <div class="prop-yield-badge">≈8.6%<small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">T-03</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">小型 2DK<br>民泊住宅物件</span>
+            <span class="lc" data-lang="en">Compact 2DK<br>Minpaku Unit</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip">33㎡</span>
+            <span class="spec-chip">2DK</span>
+            <span class="spec-chip"><span data-zh="鐵骨造" data-en="Steel">鐵骨造</span></span>
+            <span class="spec-chip"><span data-zh="民泊牌照付" data-en="Licensed">民泊牌照付</span></span>
+          </div>
+          <div class="prop-price">3,500<span class="prop-price-unit">万円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">33㎡ 的 2DK 小型住宅，民泊牌照已取得，是以小資金入門日本不動產投資的絕佳選擇。</span>
+            <span class="lc" data-lang="en">Compact 33㎡ 2DK with minpaku license. Ideal entry-level investment with solid steel frame construction.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民泊牌照已取得" data-en="Licensed">民泊牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- T4 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/t4.png" alt="T4物件">
+          <div class="prop-badge">T4 · RC造</div>
+          <div class="prop-yield-badge">≈8.8%<small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">T-04</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">RC 造優質<br>民宿物件</span>
+            <span class="lc" data-lang="en">RC Structure<br>Premium Minshuku</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip">土地 125㎡</span>
+            <span class="spec-chip">建物 392㎡</span>
+            <span class="spec-chip">RC造</span>
+            <span class="spec-chip"><span data-zh="民宿牌照付" data-en="Licensed">民宿牌照付</span></span>
+          </div>
+          <div class="prop-price">1.9<span class="prop-price-unit">億円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">土地 125㎡、建物 392㎡ 的 RC 造物件，民宿牌照已取得。堅固結構配合穩定收益，長期持有的優選。</span>
+            <span class="lc" data-lang="en">RC structure, 125㎡ land / 392㎡ floor area. Minshuku licensed. Durable build with stable long-term income.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民宿牌照已取得" data-en="Licensed">民宿牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- T8 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/t8.png" alt="T8物件">
+          <div class="prop-badge">T8 · <span data-zh="民宿物件" data-en="Minshuku">民宿物件</span></div>
+          <div class="prop-yield-badge" style="background:rgba(10,9,8,0.9);"><span data-zh="洽詢" data-en="Enquire">洽詢</span><small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">T-08</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">民宿牌照付<br>優質稀有物件</span>
+            <span class="lc" data-lang="en">Minshuku Licensed<br>Rare Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip"><span data-zh="民宿牌照付" data-en="Licensed">民宿牌照付</span></span>
+            <span class="spec-chip"><span data-zh="即買即用" data-en="Ready Now">即買即用</span></span>
+          </div>
+          <div class="prop-price">1.9<span class="prop-price-unit">億円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">民宿牌照已取得的稀有物件，購入即可開始民宿運營。詳細規格歡迎直接洽詢。</span>
+            <span class="lc" data-lang="en">Rare property with minshuku license in place. Operational from day one. Contact us for full specifications.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民宿牌照已取得" data-en="Licensed">民宿牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- H1 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/h1.png" alt="H1物件">
+          <div class="prop-badge">H1 · <span data-zh="入門物件" data-en="Starter">入門物件</span></div>
+          <div class="prop-yield-badge"><span data-zh="洽詢" data-en="Enquire">洽詢</span><small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">H-01</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">低總價<br>民宿入門物件</span>
+            <span class="lc" data-lang="en">Budget Entry<br>Minshuku Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip"><span data-zh="民宿牌照付" data-en="Licensed">民宿牌照付</span></span>
+            <span class="spec-chip"><span data-zh="低門檻投資" data-en="Low Entry">低門檻投資</span></span>
+          </div>
+          <div class="prop-price">1,000<span class="prop-price-unit">万円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">1,000 萬日圓起的低門檻民宿牌照物件，是開始日本不動產投資的最佳入門選擇。</span>
+            <span class="lc" data-lang="en">Entry-level minshuku property from ¥10M. Ideal for first-time Japanese real estate investors.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民宿牌照已取得" data-en="Licensed">民宿牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- H3 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/h3.png" alt="H3物件">
+          <div class="prop-badge">H3 · <span data-zh="中型物件" data-en="Mid-Size">中型物件</span></div>
+          <div class="prop-yield-badge">≈9.2%<small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">H-03</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">中型民宿<br>高回報物件</span>
+            <span class="lc" data-lang="en">Mid-Size Minshuku<br>High Yield Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip"><span data-zh="民宿牌照付" data-en="Licensed">民宿牌照付</span></span>
+            <span class="spec-chip"><span data-zh="約 9.2% 回報" data-en="≈9.2% Yield">約 9.2% 回報</span></span>
+          </div>
+          <div class="prop-price">6,500<span class="prop-price-unit">万円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">民宿牌照已取得，年回報約 9.2%，是尋求穩定高收益投資者的理想中型物件。</span>
+            <span class="lc" data-lang="en">Minshuku licensed, approximately 9.2% annual yield. Ideal for investors seeking reliable high returns.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民宿牌照已取得" data-en="Licensed">民宿牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- H6 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/h6.png" alt="H6物件">
+          <div class="prop-badge">H6 · <span data-zh="小型物件" data-en="Compact">小型物件</span></div>
+          <div class="prop-yield-badge"><span data-zh="洽詢" data-en="Enquire">洽詢</span><small><span data-zh="年回報率" data-en="Annual Yield">年回報率</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id">H-06</div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">小型民宿<br>即買即用物件</span>
+            <span class="lc" data-lang="en">Compact<br>Minshuku Property</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip"><span data-zh="民宿牌照付" data-en="Licensed">民宿牌照付</span></span>
+            <span class="spec-chip"><span data-zh="低門檻投資" data-en="Low Entry">低門檻投資</span></span>
+          </div>
+          <div class="prop-price">2,000<span class="prop-price-unit">万円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">2,000 萬日圓的小型民宿物件，民宿牌照已取得，購入後即可開始運營，輕鬆起步。</span>
+            <span class="lc" data-lang="en">¥20M compact minshuku. License obtained — start operating immediately upon purchase.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot"></span><span data-zh="民宿牌照已取得" data-en="Licensed">民宿牌照已取得</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+      <!-- 泉佐野 -->
+      <div class="prop-card">
+        <div class="prop-img-wrap">
+          <img src="images/izumisano.png" alt="泉佐野物件">
+          <div class="prop-badge"><span data-zh="泉佐野・開發地" data-en="Izumisano · Land">泉佐野・開發地</span></div>
+          <div class="prop-yield-badge" style="background:rgba(42,80,42,0.9);border-color:#6aad6a;"><span data-zh="開發潛力" data-en="Dev. Potential">開發潛力</span><small><span data-zh="可建 3 戶建" data-en="3 Units Possible">可建 3 戶建</span></small></div>
+        </div>
+        <div class="prop-body">
+          <div class="prop-id"><span data-zh="泉佐野市" data-en="Izumisano">泉佐野市</span></div>
+          <div class="prop-name">
+            <span class="lc active" data-lang="zh">泉佐野市<br>開發用地</span>
+            <span class="lc" data-lang="en">Izumisano City<br>Development Land</span>
+          </div>
+          <div class="prop-specs">
+            <span class="spec-chip">300㎡</span>
+            <span class="spec-chip"><span data-zh="可建 3 戶建" data-en="3 Units">可建 3 戶建</span></span>
+            <span class="spec-chip"><span data-zh="泉佐野市" data-en="Izumisano">泉佐野市</span></span>
+          </div>
+          <div class="prop-price">3,000<span class="prop-price-unit">万円</span></div>
+          <div class="prop-divider"></div>
+          <p class="prop-desc">
+            <span class="lc active" data-lang="zh">泉佐野市 300㎡ 的開發用地，可建設 3 棟戶建住宅，具備豐厚的開發利潤空間。</span>
+            <span class="lc" data-lang="en">300㎡ development land in Izumisano. Capable of 3 detached houses with strong development profit potential.</span>
+          </p>
+        </div>
+        <div class="prop-footer">
+          <div class="prop-license"><span class="prop-license-dot" style="background:#6aad6a;"></span><span data-zh="開發用地" data-en="Development Land">開發用地</span></div>
+          <a href="#contact" class="prop-cta"><span data-zh="聯繫詳詢" data-en="Contact Us">聯繫詳詢</span></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- YIELD HIGHLIGHTS -->
+<section class="yield-section" id="yield">
+  <div class="yield-inner">
+    <div class="reveal" style="margin-bottom:3.5rem;">
+      <div class="section-eyebrow">投資回報</div>
+      <h2 id="yield-title" class="section-title" data-zh="為何選擇<em>日本民泊</em>投資" data-en="Why Invest in <em>Japan Minpaku</em>">為何選擇<em>日本民泊</em>投資</h2>
+      <span id="yield-title-ja" class="section-title-ja" data-zh="穩定收益與資產價值" data-en="Stable Yield and Asset Value">穩定收益與資產價值</span>
+    </div>
+    <div class="yield-grid stagger">
+      <div class="yield-item">
+        <span class="yield-item-num">8%-14.1%</span>
+        <span class="yield-item-label">年化毛收益</span>
+        <p class="yield-item-desc">精選物件年回報率介於 8%~14.1%，明顯高於傳統長租模式。民泊運營具備更靈活的定價與收益空間。</p>
+      </div>
+      <div class="yield-item">
+        <span class="yield-item-num">牌照齊全</span>
+        <span class="yield-item-label">已取得民泊許可</span>
+        <p class="yield-item-desc">主要物件均已取得日本民泊牌照，免除冗長申請流程，購入後可直接投入運營，加速資金回收。</p>
+      </div>
+      <div class="yield-item">
+        <span class="yield-item-num">複合收益</span>
+        <span class="yield-item-label">多元收入結構</span>
+        <p class="yield-item-desc">T2 物件可同時覆蓋倉庫、商鋪、事務所與民泊四類收益來源，分散風險並提升資產使用效率。</p>
+      </div>
+    </div>  </div>
+</section>
+
+<!-- MINPAKU SECTION -->
+<section class="minpaku-section" id="minpaku">
+  <div class="minpaku-layout">
+    <div class="minpaku-img-stack reveal-left">
+      <div class="mi-img mi-1">
+        <img src="images/li1.jpg" alt="民泊室内">
+      </div>
+      <div class="mi-img mi-2">
+        <img src="images/li2.jpg" alt="日本住宅">
+      </div>
+    </div>
+
+    <div class="minpaku-text reveal-right">
+      <div class="section-eyebrow">民泊牌照</div>
+      <h2 id="minpaku-title" class="section-title" data-zh="民泊牌照<em>優勢</em>" data-en="Minpaku License <em>Advantages</em>">民泊牌照<em>優勢</em></h2>
+      <span id="minpaku-title-ja" class="section-title-ja" data-zh="民泊許可取得優勢" data-en="Benefits of Approved License">民泊許可取得優勢</span>
+
+      <ul class="minpaku-list">
+        <li class="ml-item">
+          <span class="ml-num">01</span>
+          <div class="ml-content">
+            <div class="ml-title">即時運營、無需等待</div>
+            <p class="ml-desc">民泊牌照申請週期常達數月，本次物件均已完成申請，購入後可立即開始民泊運營，節省時間成本。</p>
+          </div>
+        </li>
+        <li class="ml-item">
+          <span class="ml-num">02</span>
+          <div class="ml-content">
+            <div class="ml-title">高於長租的收益潛力</div>
+            <p class="ml-desc">民泊短租模式可依淡旺季靈活定價，整體年回報普遍高於傳統長期租賃約 2 至 3 倍。</p>
+          </div>
+        </li>
+        <li class="ml-item">
+          <span class="ml-num">03</span>
+          <div class="ml-content">
+            <div class="ml-title">訪日旅客持續增長</div>
+            <p class="ml-desc">日本訪日旅客數量持續創新高，民泊需求強勁，特別在非傳統觀光區域仍有擴張空間。</p>
+          </div>
+        </li>
+        <li class="ml-item">
+          <span class="ml-num">04</span>
+          <div class="ml-content">
+            <div class="ml-title">全程運營管理支援</div>
+            <p class="ml-desc">提供購置後民泊運營對接服務，包含平台上架、清潔外包、入住管理等一站式方案。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-layout">
+      <div class="contact-left reveal-left">
+        <div class="section-eyebrow" style="color:var(--gold);">諮詢</div>
+        <h2 class="section-title">聯繫<em>物件說明</em></h2>
+        <span class="section-title-ja">お問い合わせ・資料請求</span>
+        <p>歡迎留下聯絡方式，我們將在 24 小時內回覆，安排詳細的物件說明與投資試算。</p>
+        <div style="margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:32px;height:1px;background:var(--gold);"></div>
+            <span style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(245,240,232,0.35);text-transform:uppercase;">24 小時回覆</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:32px;height:1px;background:var(--gold);"></div>
+            <span style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(245,240,232,0.35);text-transform:uppercase;">繁體中文服務</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:32px;height:1px;background:var(--gold);"></div>
+            <span style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(245,240,232,0.35);text-transform:uppercase;">免費諮詢</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <form class="contact-form" id="contact-form" method="post" action="/api/contact">
+          <div class="form-group">
+            <label class="form-label">姓名</label>
+            <input class="form-input" type="text" name="name" placeholder="您的姓名" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">聯絡方式</label>
+            <input class="form-input" type="text" name="contact" placeholder="電話 / LINE / WeChat / Email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">感興趣的物件</label>
+            <input class="form-input" type="text" name="property" placeholder="例如：T2 大阪複合物件 / 自定義物件名稱">
+          </div>
+          <div class="form-group">
+            <label class="form-label">備註</label>
+            <textarea class="form-textarea" name="message" placeholder="請留下您的問題或需求（選填）"></textarea>
+          </div>
+          <button class="form-submit" type="submit" id="form-submit-btn">送出諮詢</button>
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Torii Estate</div>
+  <div class="footer-links">
+    <a href="#properties">物件一覽</a>
+    <a href="#yield">投資回報</a>
+    <a href="#minpaku">民泊牌照</a>
+    <a href="#contact">聯絡我們</a>
+  </div>
+  <div class="footer-copy">© 2025 Torii Estate · 日本不動產投資</div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+  nav.classList.add('scrolled'); // start scrolled for visibility
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger').forEach(el => io.observe(el));
+</script>
+
+<script>
+(function applyChineseOnly() {
+  document.documentElement.lang = 'zh-TW';
+
+  document.querySelectorAll('.lc[data-lang="en"]').forEach((el) => {
+    el.style.display = 'none';
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.lc[data-lang="zh"]').forEach((el) => {
+    el.style.display = '';
+    el.classList.add('active');
+  });
+
+  const setText = (sel, val, html = false) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    if (html) el.innerHTML = val;
+    else el.textContent = val;
+  };
+
+  setText('.logo-ja', '日本不動產投資');
+  setText('.nav-links li:nth-child(1) a', '物件一覽');
+  setText('.nav-links li:nth-child(2) a', '投資回報');
+  setText('.nav-links li:nth-child(3) a', '民泊牌照');
+  setText('.nav-links li:nth-child(4) a', '聯絡我們');
+  setText('#nav-contact-btn', '諮詢物件');
+  setText('#yield .section-eyebrow', '投資回報');
+  setText('#minpaku .section-eyebrow', '民泊牌照');
+  setText('.contact-left .section-eyebrow', '諮詢');
+
+  setText('.hero-eyebrow', 'Japan Premium Real Estate · 民泊投資');
+  setText('.hero-h1', '在日本<br><em>穩健增值</em><br>的不動產', true);
+  setText('.hero-h1-ja', '含民泊牌照 · 高回報率 · 精選物件');
+  setText('.hero-desc', '精選具備民泊牌照的日本物件，年回報率約 8% 至 14.1%。涵蓋複合商辦、住宅與開發型土地，並提供一站式購置與運營支援。');
+  setText('.hero-stat-label:nth-of-type(1)', '精選物件');
+  setText('.hero-stat-label:nth-of-type(2)', '年回報率');
+  setText('.hero-stat-label:nth-of-type(3)', '運營支援');
+
+  setText('#yield-title', '為何選擇<em>日本民泊</em>投資', true);
+  setText('#yield-title-ja', '穩定收益與資產價值');
+  setText('#minpaku-title', '民泊牌照<em>優勢</em>', true);
+  setText('#minpaku-title-ja', '民泊許可取得優勢');
+
+  setText('.contact-left .section-title', '聯絡<em>物件說明</em>', true);
+  setText('.contact-left .section-title-ja', '歡迎索取投資資料');
+  setText('.contact-left p', '請留下聯絡方式，我們將於 24 小時內回覆，並提供物件說明與投資測算。');
+  setText('.contact-form .form-group:nth-child(1) .form-label', '姓名');
+  setText('.contact-form .form-group:nth-child(2) .form-label', '聯絡方式');
+  setText('.contact-form .form-group:nth-child(3) .form-label', '感興趣的物件');
+  setText('.contact-form .form-group:nth-child(4) .form-label', '備註');
+  setText('.form-submit', '送出諮詢');
+  const contactBadges = document.querySelectorAll('.contact-left div[style*="font-family:\'DM Mono\'"]');
+  if (contactBadges[0]) contactBadges[0].textContent = '24 小時回覆';
+  if (contactBadges[1]) contactBadges[1].textContent = '繁體中文服務';
+  if (contactBadges[2]) contactBadges[2].textContent = '免費諮詢';
+
+  const nameInput = document.querySelector('.contact-form .form-group:nth-child(1) input');
+  const contactInput = document.querySelector('.contact-form .form-group:nth-child(2) input');
+  const msgInput = document.querySelector('.form-textarea');
+  if (nameInput) nameInput.placeholder = '您的姓名';
+  if (contactInput) contactInput.placeholder = '電話 / LINE / WeChat / Email';
+  if (msgInput) msgInput.placeholder = '請留下您的問題或需求（選填）';
+
+  const propertyInput = document.querySelector('input[name="property"]');
+  if (propertyInput) propertyInput.placeholder = '例如：T2 大阪複合物件 / 自定義物件名稱';
+
+  setText('.footer-links a:nth-child(1)', '物件一覽');
+  setText('.footer-links a:nth-child(2)', '投資回報');
+  setText('.footer-links a:nth-child(3)', '民泊牌照');
+  setText('.footer-links a:nth-child(4)', '聯絡我們');
+  setText('.footer-copy', '© 2025 Torii Estate · 日本不動產投資');
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "TORII ESTATE",
+  "url": "https://example.com/",
+  "description": "日本民泊與不動產投資物件服務，提供牌照齊全標的與運營支援。",
+  "areaServed": "JP",
+  "inLanguage": "zh-TW"
+}
+</script>
+<script>
+(function bindContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const btn = document.getElementById('form-submit-btn');
+  if (!form || !status || !btn) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'form-status show';
+    status.textContent = '提交中，請稍候...';
+    btn.disabled = true;
+
+    const payload = {
+      name: form.elements.name.value.trim(),
+      contact: form.elements.contact.value.trim(),
+      property: form.elements.property.value.trim(),
+      message: form.elements.message.value.trim(),
+      source: window.location.href,
+      submittedAt: new Date().toISOString()
+    };
+
+    if (!payload.name || !payload.contact) {
+      status.className = 'form-status show error';
+      status.textContent = '請先填寫姓名與聯絡方式。';
+      btn.disabled = false;
+      return;
+    }
+
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!resp.ok) throw new Error('submit_failed');
+      status.className = 'form-status show';
+      status.textContent = '提交成功，我們會盡快與您聯絡。';
+      form.reset();
+    } catch (err) {
+      status.className = 'form-status show error';
+      status.textContent = '提交失敗，請稍後再試。';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
