@@ -1303,7 +1303,7 @@ footer {
       form.reset();
     } catch (err) {
       status.className = 'form-status show error';
-      status.textContent = '提交失敗，請稍後再試。';
+      status.textContent = '提交失敗，請稍後再試（若持續失敗，請聯繫管理員檢查郵件配置）。';
     } finally {
       btn.disabled = false;
     }
